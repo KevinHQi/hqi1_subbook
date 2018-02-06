@@ -1,9 +1,21 @@
+/*
+ * subInfo
+ *
+ *
+ * feb 5, 2018
+ *
+ * Copyright (c) 2018 Haotian Qi. CMPUT301, University of Alberta - All Rights Reserved.
+ * You may use, distribute, or modify this code under terms and condition of the Code of Student Behaviour at University of Alberta.
+ * You can find a copy of the license in this project. Otherwise please contact me.
+ */
 package com.example.hqi1_subbook;
 
 /**
- * Created by kq on 2/5/2018.
+ * the class used to handle object for subList
+ *
+ * @see MainActivity
+ * @see objectSubInfo
  */
-
 public class subInfo {
     private String name;
     private String date;
@@ -13,13 +25,6 @@ public class subInfo {
 
     subInfo(String info){
         this.info = info;
-    }
-
-    subInfo(String name, String date, double charge, String comment){
-        this.name = name;
-        this.date = date;
-        this.charge = charge;
-        this.comment = comment;
     }
 
     public String getName(){ return name; }
