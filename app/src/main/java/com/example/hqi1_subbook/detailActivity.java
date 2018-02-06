@@ -80,7 +80,7 @@ public class detailActivity extends AppCompatActivity {
                 }
                 else{
                     //send new subscription to MainActivity
-                    String text = textN + "\n" + textD + "\n" + textCh + "\n" + textCo;
+                    String text = textN + "\n" + textD + "\n" + textCh + "\n" + textCo + " ";
                     Intent mainScreen = new Intent();
                     mainScreen.putExtra("newInfo",text);
                     setResult(RESULT_OK,mainScreen);

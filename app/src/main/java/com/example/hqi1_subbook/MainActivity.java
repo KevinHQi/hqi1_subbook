@@ -20,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -127,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // when user canceled action
+
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)
@@ -146,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         loadFromFile();
-        
+
         adapter = new ArrayAdapter<subInfo>(this,
                     R.layout.list_item, subList);
         mainSubList.setAdapter(adapter);

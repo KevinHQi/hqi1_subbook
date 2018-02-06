@@ -92,7 +92,7 @@ public class editActivity extends AppCompatActivity {
                 }
                 else{
                     //send back to MainActivity
-                    String text = textN + "\n" + textD + "\n" + textCh + "\n" + textCo;
+                    String text = textN + "\n" + textD + "\n" + textCh + "\n" + textCo + " ";
                     Intent mainScreen = new Intent();
                     Bundle editText = new Bundle();
                     editText.putString("newInfo",text);

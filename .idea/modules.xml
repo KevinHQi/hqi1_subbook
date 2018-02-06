@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Q\Doc\Study\cmput301\git\subBook\hqi1_subbook\app\app.iml" filepath="C:\Q\Doc\Study\cmput301\git\subBook\hqi1_subbook\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/hqi1_subbook.iml" filepath="$PROJECT_DIR$/hqi1_subbook.iml" />
-      <module fileurl="file://C:\Q\Doc\Study\cmput301\git\subBook\hqi1_subbook\hqi1_subbook.iml" filepath="C:\Q\Doc\Study\cmput301\git\subBook\hqi1_subbook\hqi1_subbook.iml" />
     </modules>
   </component>
 </project>
