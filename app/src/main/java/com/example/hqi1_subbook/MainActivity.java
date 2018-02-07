@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<subInfo> subList;
     private ArrayAdapter<subInfo> adapter;
 
+    private int index;
+
     ////////////////////////////////onCreate/////////////////////////////////////////////////
 
     /**
@@ -88,9 +90,8 @@ public class MainActivity extends AppCompatActivity {
                 //get the text to be edit
                 subInfo info = subList.get(i);
                 String text = info.getInfo();
-                subList.remove(i);
-                adapter.notifyDataSetChanged();
-                saveInFile();
+
+                index = i;
 
                 //send the text to the editActivity and request text after edit
                 Intent editMode = new Intent(MainActivity.this, editActivity.class);
@@ -223,16 +224,26 @@ public class MainActivity extends AppCompatActivity {
             //get and save text which received
             String rInfo = data.getStringExtra("newInfo");
             subInfo info = new objectSubInfo(rInfo);
-            subList.add(info);
-            adapter.notifyDataSetChanged();
-            saveInFile();
 
             //give different notifications
             if(requestCode == 0){
+                subList.add(info);
+                adapter.notifyDataSetChanged();
+                saveInFile();
                 Toast.makeText(getApplicationContext(), "New subscription added",
                         Toast.LENGTH_LONG).show();
             }
             else{
+                subInfo oldInfo = subList.get(index);
+                String oldText = oldInfo.getInfo();
+                String text = info.getInfo();
+                if (oldText != text){
+                    subList.set(index,info);
+                }
+
+                adapter.notifyDataSetChanged();
+                saveInFile();
+
                 Toast.makeText(getApplicationContext(), "Subscription edited",
                         Toast.LENGTH_LONG).show();
             }
